@@ -10,7 +10,6 @@ const SubmittedQues = (props) => {
             { question.options.map((option, i) => {
                 return (
                     <div key={i} className={`option ${(correctOption === (i+1) ? "correct" : (marked === (i+1) ? "incorrect" : ""))}`} >
-                        {/* <input type="checkbox" checked={(marked === (i+1) || correctOption === (i+1))} readOnly /> */}
                         <span>{i+1}. {option}</span>
                     </div>
                 )

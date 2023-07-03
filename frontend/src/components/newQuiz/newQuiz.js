@@ -7,34 +7,34 @@ const NewQuiz = () => {
 
     const navigate = useNavigate();
 
-    const ques = {description: "", options: ["", "", "", ""], correctOption: -1};
-    const [formData, setFormData] = useState({
+    const ques = {description: "", options: ["", "", "", ""], correctOption: -1}; //question format template object
+    const [formData, setFormData] = useState({      //formData stores the data filled by the user
         title: "",
         duration: 0,
         questions: [ques]
     });
 
-    const [time, setTime] = useState({
+    const [time, setTime] = useState({          //time useState stores the time in (hrs, mins, secs) from the form
         hrs: 0,
         mins: 0,
         secs: 0
     });
 
-    const [submitted, setSubmitted] = useState(false);
+    const [submitted, setSubmitted] = useState(false);  //true if form is submitted, false otherwise
 
-    const handleTitleChange = (event) => {
+    const handleTitleChange = (event) => {      //handles change in title in the form
         const {duration, questions} = formData;
         setFormData({title:event.target.value, duration, questions});
     }
 
-    const handleActualDuration = (data) => {
+    const handleActualDuration = (data) => {        //converts the given time in (hrs, mins, secs) to miliseconds and updates the formData
         let calc_time = ((data.hrs) * 60 * 60 * 1000) + ((data.mins) * 60 * 1000) + ((data.secs) * 1000);
         const temp = {...formData};
         temp.duration = calc_time;
         setFormData(temp);
     }
 
-    const handleDurationChange = (event) => {
+    const handleDurationChange = (event) => {       //updates the time useState
         const data = {...time};
         data[event.target.name] = Number(event.target.value);
         setTime(data);
@@ -44,31 +44,31 @@ const NewQuiz = () => {
     }
 
 
-    const handleQuestionChange = (e, i) => {
+    const handleQuestionChange = (e, i) => {        //updates the description of ith question in formData
         const data = {...formData};
         data.questions[i][e.target.name] = e.target.value;
         setFormData(data);
     }
 
-    const handleOptionChange = (e, i, ind) => {
+    const handleOptionChange = (e, i, ind) => {     //updates the option of ith question in formData
         const data = {...formData};
         data.questions[i].options[ind] = e.target.value;
         setFormData(data);
     }
 
-    const handleCorrectOptionChange = (i, ind) => {
+    const handleCorrectOptionChange = (i, ind) => {     //updates the correct option of ith question in formData
         const data = {...formData};
         data.questions[i].correctOption = ind+1;
         setFormData(data);
     }
 
-    const handleAddQuestion = () => {
+    const handleAddQuestion = () => {       //adds a new question template
         const data = {...formData};
         data.questions = [...data.questions, ques];
         setFormData(data);
     }
 
-    const validateData = () => {
+    const validateData = () => {    //checks if the form filled is validates or not
         let valid = true;
         if(formData.title === "" || formData.duration === 0) valid = false;
         else {
@@ -88,7 +88,7 @@ const NewQuiz = () => {
     }
 
 
-    const handleSubmitForm = async () => {
+    const handleSubmitForm = async () => {      //sends the data to the backend server
         const valid =  validateData();
         if(!valid) {
             alert("Please fill the form correctly");

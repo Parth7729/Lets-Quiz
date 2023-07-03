@@ -5,23 +5,6 @@ const postQuiz = async (req, res) => {
 
     const entry = req.body;
 
-    // {
-    //     title: "this is the title",
-    //     duration: 10000,
-    //     questions: [
-    //         {
-    //             description: "this is the discription1",
-    //             options: ["this is the ques1", "this is the ques2", "this is the ques3", "this is the ques4"],
-    //             correctOption: 2
-    //         },
-    //         {
-    //             description: "this is the discription2",
-    //             options: ["this is the ques1", "this is the ques2", "this is the ques3", "this is the ques4"],
-    //             correctOption: 4
-    //         }
-    //     ]
-    // }
-
     const quiz = new Quiz({title: entry.title, duration: entry.duration});
 
     entry.questions.map(({description, options, correctOption}) => {

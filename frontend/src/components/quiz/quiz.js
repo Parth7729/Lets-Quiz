@@ -9,7 +9,7 @@ const Quiz = (props) => {
 
     const {title, duration, questions} = props.data;
     
-    const [ans, setAns] = useState(questions.map( (ques) => ({correctOption: ques.correctOption, marked: -1}) ));
+    const [ans, setAns] = useState(questions.map( (ques) => ({correctOption: ques.correctOption, marked: -1}) ));   //stores the ans given by the user for each question
     const [submit, setSubmit] = useState(false);
 
 

@@ -7,9 +7,11 @@ const Result = (props) => {
     const navigate = useNavigate();
 
     const {ans, title, questions} = props;
-    let correct = 0, incorrect = 0, notAnswered = 0;
+    
+    let correct = 0, incorrect = 0, notAnswered = 0;    //stores the result
     const noOfQues = questions.length;
-    ans.map(({correctOption, marked }) => {
+
+    ans.map(({correctOption, marked }) => {     //calculating the result
         if(correctOption === marked) correct++;
         else if(marked !== -1) incorrect++;
         else notAnswered++;

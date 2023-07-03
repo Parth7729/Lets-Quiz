@@ -2,7 +2,7 @@ import "./home.css";
 import { useNavigate, Link } from "react-router-dom";
 
 const Home = () => {
-    const navigate = useNavigate();
+    
     return (
         <div className="home">
             <Link to={"/quizes"}><div className="qiuz-btn" >Quizes</div></Link>

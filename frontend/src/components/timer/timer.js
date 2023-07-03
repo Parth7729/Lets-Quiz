@@ -2,7 +2,7 @@ import { useTimer } from "../../hooks/hooks.js";
 import "./timer.css";
 
 
-const Timer = (props) => {
+const Timer = (props) => {  //timer functional component
 
     const {duration, setSubmit} = props;
 

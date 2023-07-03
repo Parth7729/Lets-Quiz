@@ -5,23 +5,14 @@ import NewQuiz from "../components/newQuiz/newQuiz.js";
 import Quiz from "../components/quiz/quiz.js";
 
 
-const router = createBrowserRouter([
+const router = createBrowserRouter([    //routes for the app
     {
         path: "/",
         element: <Home />
     },
     {
         path: "/quizes",
-        children: [
-            {
-                path: "",
-                element: <Quizes />
-            },
-            {
-                path: ":id",
-                element: <Quiz />
-            }
-        ]
+        element: <Quizes />
     },
     {
         path: "/new-quiz",

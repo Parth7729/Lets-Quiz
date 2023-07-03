@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 
 
-export const useGetData = () => {
-    // {
-    //     success: true/false,
-    //     quizes: []
-    // }
+export const useGetData = () => {       //hook to get data from the server
     const [data, setData] = useState({success: false, quizes: []});
 
     useEffect(() => {
@@ -27,7 +23,7 @@ export const useGetData = () => {
 }
 
 
-export const useGetQuiz = (id) => {
+export const useGetQuiz = (id) => {     //hook to get a particular quiz from the servrer
     const [data, setData] = useState({success: false});
 
     useEffect(() => {
@@ -51,7 +47,7 @@ export const useGetQuiz = (id) => {
 
 
 
-export const useTimer = (duration) => {
+export const useTimer = (duration) => {     //hook to implement the Timer. It calculates the time left in miliseconds and coverts that to hrs, mins, secs and returns it.
 
 
     const end = Date.now() + duration + 500; // 500 ms is added to compensate the time taken to load the quiz
