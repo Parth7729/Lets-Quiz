@@ -1,0 +1,27 @@
+.home {
+    width: 50%;
+    height: 400px;
+    margin: 100px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home > a {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    width: 150px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.home > a:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+}

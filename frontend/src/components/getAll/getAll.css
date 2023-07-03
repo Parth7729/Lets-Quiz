@@ -1,0 +1,6 @@
+.quiz-list {
+    width: 85%;
+    margin: 20px auto;
+    background-color: white;
+    display: flow-root;
+}

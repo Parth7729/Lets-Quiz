@@ -1,0 +1,27 @@
+.quiz {
+    width: 90%;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.quiz > h2 {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+}
+
+.quiz > button {
+    all: unset;
+    cursor: pointer;
+    background-color: rgb(130, 216, 156);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.quiz > button:hover {
+    background-color: rgb(84, 206, 121);
+}

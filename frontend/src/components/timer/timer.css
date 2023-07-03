@@ -1,0 +1,12 @@
+.timer {
+    width: 120px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: black;
+    background-color: rgb(222, 222, 222);
+    padding: 0.3rem;
+    border-radius: 10px;
+    position: fixed;
+    right: 0px;
+}

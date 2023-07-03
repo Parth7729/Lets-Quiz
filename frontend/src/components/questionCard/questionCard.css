@@ -1,0 +1,27 @@
+.question {
+    border: 1px solid rgb(208, 220, 229);
+    /* border-radius: 5px; */
+    margin: 20px;
+    padding: 20px;
+}
+
+.question > h3 {
+    font-weight: 500;
+}
+
+.question > h3 > span {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.options > div {
+    width: 40%;
+    padding: 10px;
+}
+

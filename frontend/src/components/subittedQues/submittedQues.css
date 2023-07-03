@@ -1,0 +1,15 @@
+.option {
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+}
+
+.correct {
+    background-color: #98FB98;
+    border: 1px solid rgb(208, 220, 229);
+}
+
+.incorrect {
+    background-color: rgb(230, 104, 104);
+    border: 1px solid rgb(208, 220, 229);
+}
